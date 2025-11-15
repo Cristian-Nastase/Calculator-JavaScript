@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    body
+    {
+        width: 100%;
+        height: auto;
+
+        margin: auto;
+
+        background-color: rgb(70, 68, 68);
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Calculator
+    {
+        width: 80%;
+        height: auto;
+
+        padding: 2rem;
+        margin: 5rem;
+
+        display: grid;
+    
+        grid-template-rows: repeat(auto, 1fr);
+        grid-template-columns: repeat(auto, 1fr);
+
+        grid-template-areas: 
+        "text text text text"
+        "B1 B2 B3 O0"
+        "B4 B5 B6 O1"
+        "B7 B8 B9 O2"
+        "reset B0 clear O3"
+        "c0 c0 c0 c0";
+
+        row-gap: 1rem;
+        column-gap: 1rem;
+
+        place-items: center;
+
+        background-color: black;
+        border-radius: 20px;
+
+        button
+        {
+            width: 100%; 
+            padding: 3rem;
+
+            border: 1px solid black;
+            border-radius: 10px;
+
+            box-shadow: 
+            0 0 10px 5px rgb(20, 20, 32);
+
+            object-fit: cover;
+
+            font-size: 2rem;
+        }
+    }
+
+    button.number
+    {
+        background-color: orange;
+    }
+
+    button.operator
+    {
+        background-color: yellow;
+    }
+
+    button#butonClear, button#butonReset
+    {
+        background-color: lime;
+    }
+
+    button.calcul
+    {
+        background-color:red;
+    }
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div id="Calculator">
+        <button id="butonText">0</button>    
+        <button id="butonClear">Clear</button>
+        <button id="butonReset">Reset</button>
+    </div>
+</body>
+</html>
