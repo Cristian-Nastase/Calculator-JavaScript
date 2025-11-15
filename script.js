@@ -83,13 +83,17 @@ function calcul()
     {
         case "+":
             operatorulCurent = operatorulTrecut + operatorulCurent;
+            break;
         case "-":
             operatorulCurent = operatorulTrecut - operatorulCurent;
+            break;
         case "/":
             if(operatorulCurent != 0) operatorulCurent = operatorulTrecut / operatorulCurent;
             else operatorulCurent = "Nu este posibila impartirea prin zero!";
+            break;
         case "*":
             operatorulCurent = operatorulTrecut * operatorulCurent;
+            break;
     }
     
     schimbaTextul()
