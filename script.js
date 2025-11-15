@@ -73,15 +73,25 @@ function clear()
 
 function reset()
 {
+    termina();
     schimbaTextul();
 }
 
 function calcul()
-{
-    if (operatie == "+") operatorulCurent = operatorulTrecut + operatorulCurent;
-    else if (operatie == "-") operatorulCurent = operatorulTrecut - operatorulCurent;
-    else if (operatie == "/") operatorulCurent = operatorulTrecut / operatorulCurent;
-    else if (operatie == "*") operatorulCurent = operatorulTrecut * operatorulCurent;
+{   
+    switch(operatie)
+    {
+        case "+":
+            operatorulCurent = operatorulTrecut + operatorulCurent;
+        case "-":
+            operatorulCurent = operatorulTrecut - operatorulCurent;
+        case "/":
+            if(operatorulCurent != 0) operatorulCurent = operatorulTrecut / operatorulCurent;
+            else operatorulCurent = "Nu este posibila impartirea prin zero!";
+        case "*":
+            operatorulCurent = operatorulTrecut * operatorulCurent;
+    }
+    
     schimbaTextul()
     termina();
 }
