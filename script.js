@@ -97,7 +97,8 @@ function calcul()
     }
     
     schimbaTextul()
-    termina();
+    operatorulTrecut = 0;
+    operatie = "";
 }
 
 function termina()
